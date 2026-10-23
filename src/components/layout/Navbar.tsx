@@ -87,10 +87,10 @@ export function Navbar() {
               >
                 <UserCheck className="w-3.5 h-3.5 text-amber-400" />
                 <div className="flex flex-col text-left">
-                  <span className="font-medium text-white truncate max-w-[140px] sm:max-w-[180px]">
+                  <span suppressHydrationWarning className="font-medium text-white truncate max-w-[140px] sm:max-w-[180px]">
                     {currentUser.name}
                   </span>
-                  <span className="text-[10px] text-zinc-400 uppercase tracking-wider">
+                  <span suppressHydrationWarning className="text-[10px] text-zinc-400 uppercase tracking-wider">
                     {currentUser.role.replace('_', ' ')}
                   </span>
                 </div>

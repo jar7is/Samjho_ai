@@ -455,3 +455,6 @@ export const INITIAL_DEMO_INCIDENTS: Incident[] = [
     ],
   },
 ];
+
+export const INITIAL_INCIDENTS = INITIAL_DEMO_INCIDENTS;
+

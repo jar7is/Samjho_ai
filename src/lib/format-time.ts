@@ -14,6 +14,25 @@ export function formatIncidentTime(dateStr: string): string {
   });
 }
 
+export function formatIncidentDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return dateStr;
+  return date.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+export function formatIncidentDateTime(dateStr: string): string {
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return dateStr;
+  const dateFormatted = formatIncidentDate(dateStr);
+  const timeFormatted = formatIncidentTime(dateStr);
+  return `${dateFormatted} at ${timeFormatted}`;
+}
+
 export function formatAuditTime(dateStr: string): string {
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return dateStr;
